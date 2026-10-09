@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            * {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292b32;
+}
+
+.cont1 {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.cont2 {
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    width: 40px;
+}
+
+.cont3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    transition: transform 0.8s ease;
+}
+
+.cont3 :hover{
+    cursor: pointer;
+   
+    border-radius: 10px;
+    height: 50px;
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.text1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #303039;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.text1 span {
+    margin-left: 8px;
+}
+
+
+.cont4 {
+    margin-left: auto;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text3 {
+    font-size: 25px;
+}
+
+.text4 {
+    font-size: 17px;
+}
+
+.text5 {
+    margin-left: 22px;
+    font-size: 29px;
+}
+
+.cont03{
+    display: flex;
+    margin-top: 20px;
+    margin-left: 110px;
+    gap: 120px;
+}
+    </style>
+</head>
+<body>
+    <header class="cont1">
+    <div class="cont2">
+         <a href="index.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo1"> </a> 
+    </div>
+    <div class="cont3">
+        <a href="#modeli" class="text1">Модели</a>
+        <a href="images/index2.html" class="text1">
+            Авто с пробегом
+        </a>
+        <a href="index3.html" class="text1">Trade-in</a>
+        <a href="index4.html" class="text1 text2">
+            Финансы и страхование
+        </a>
+        <a href="index5.html" class="text1">Сервис</a>
+        <a href="index6.html" class="text1">Бизнес</a>
+        <a href="index7.html" class="text1">Мир Toyota</a>
+    </div>
+    <div class="cont4">
+        <span class="text3">◎</span>
+        <span class="text4">
+            <select style="border: none;">
+                <option value="">RU</option>
+                <option value="">KAZ</option>
+            </select>
+        </span>
+        <span class="text5">⌕</span>
+    </div>
+</header>
+
+
+<div class="cont03">
+     <div>
+        <h4>Компания</h4>
+        <p>О нас</p>
+        <p>История Toyota</p>
+        <p>Руководящие принципы Toyota</p>
+     </div>
+
+     <div>
+        <h4>Карьера</h4>
+        <p>Toyota Мотор Казахстан</p>
+        <p>Toyota Финанс</p>
+     </div>
+
+     <div style="line-height: 30px;">
+        <h4>Новости и события →</h4>
+        <h4>Экология →</h4>
+        <h4>Гибридная технология →</h4>
+     </div>
+</div>
+</body>
+</html>

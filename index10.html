@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          * {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292b32;
+}
+
+.cont1 {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.cont2 {
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    width: 40px;
+}
+
+.cont3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    transition: transform 0.8s ease;
+}
+
+.cont3 :hover{
+    cursor: pointer;
+   
+    border-radius: 10px;
+    height: 50px;
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.text1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #303039;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.text1 span {
+    margin-left: 8px;
+}
+
+
+.cont4 {
+    margin-left: auto;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text3 {
+    font-size: 25px;
+}
+
+.text4 {
+    font-size: 17px;
+}
+
+.text5 {
+    margin-left: 22px;
+    font-size: 29px;
+}
+
+.www{
+    width: 100%;
+}
+
+.qqq{
+    text-align: center;
+}
+
+.qqq button{
+    width: 150px;
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.rrr{
+    display: flex;
+    justify-content: center;
+    gap: 67px;
+    margin-top: 40px;
+}
+
+.eee h2{
+    margin-top: 70px;
+}
+
+.ttt img{
+    width: 550px;
+}
+
+.ttt{
+    margin-top: 50px;
+}
+
+.yyy img{
+    width: 550px;
+}
+
+.yyy{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+}
+
+.cont30 {
+    width: 100%;
+    min-height: 650px;
+    background: white;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.cont31 {
+    width: 100%;
+    padding-left: 110px;
+    margin-bottom: 65px;
+}
+
+.photo8 {
+    width: 45px;
+    height: auto;
+}
+
+.cont32 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 110px;
+    gap: 65px;
+}
+
+.cont33 {
+    display: flex;
+    flex-direction: column;
+}
+
+.text17 {
+    margin: 0 0 28px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #292a31;
+}
+
+.text18,
+.text19 {
+    text-decoration: none;
+    color: #303139;
+    font-size: 17px;
+    margin-bottom: 42px;
+    line-height: 1;
+}
+
+.text21 {
+    color: #777;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.text22 {
+    float: right;
+    color: #777;
+    font-size: 25px;
+    margin-right: 25px;
+}
+    </style>
+</head>
+<body>
+    <header class="cont1">
+    <div class="cont2">
+      <a href="index.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo1"> </a> 
+    </div>
+    <div class="cont3">
+        <a href="#modeli" class="text1">Модели</a>
+        <a href="images/index2.html" class="text1">
+            Авто с пробегом
+        </a>
+        <a href="index3.html" class="text1">Trade-in</a>
+        <a href="index4.html" class="text1 text2">
+            Финансы и страхование
+        </a>
+        <a href="index5.html" class="text1">Сервис</a>
+        <a href="index6.html" class="text1">Бизнес</a>
+        <a href="index7.html" class="text1">Мир Toyota</a>
+    </div>
+    <div class="cont4">
+        <span class="text3">◎</span>
+        <span class="text4">
+            <select style="border: none;">
+                <option value="">RU</option>
+                <option value="">KAZ</option>
+            </select>
+        </span>
+        <span class="text5">⌕</span>
+    </div>
+</header>
+
+<img src="images/Снимок экрана 2026-10-06 в 18.37.00.png" alt="" class="www">
+
+<div class="qqq">
+     <h2  style="margin-top: 40px;">Сервисный план «5 ТО»</h2>
+     <p  style="margin-top: 70px; font-size: 20px;">Как проверить наличие сервисного плана 5ТО?</p>
+     <p style="margin-top: 40px;">Введите свой VIN</p>
+     <p style="margin-top: 30px;">Здесь вы можете узнать, действует ли на ваш автомобиль сервисный план '5ТО', а также сколько ТО у вас осталось. <br>Для этого достаточно ввести VIN-код. Информация доступна сразу после покупки автомобиля.</p>
+     <div><input style="width: 870px; height: 40px; border-radius: 18px; border: 1px solid black; background-color: rgb(232, 232, 232); padding-left: 16px; margin-top: 10px;" type="text" placeholder="Введите VIN здесь (17 знаков)"></div>
+     <button>Отправить</button>
+     <button style="background-color: white; color: black;">Очистить</button>
+</div>
+
+
+<div class="eee">
+    <h2 style="text-align: center; margin-top: 200px;">Toyota предоставляет сервисный план в комплекте нового автомобиля на <br>прохождение пяти  технических обслуживаний в течение пяти лет</h2>
+    <div class="rrr">
+        <div>
+            <h2>Что такое сервисный план «5 <br>ТО»?</h2>
+            <p>Сервисный план «5 ТО» предоставляет владельцам новых <br>автомобилей Toyota (за исключением моделей Hiace, <br>Hilux, Highlander и Corolla), приобретённых у <br>официального дилера Toyota в Казахстане или <br>Кыргызстане, право пройти пять плановых технических <br>обслуживаний без взимания дополнительной платы. <br>
+                 <br>
+               Техническое обслуживание проводится в соответствии с <br>регламентом завода-изготовителя в официальных <br>сервисных центрах Toyota в Казахстане и Кыргызстане в <br>течение пяти лет с даты приобретения автомобиля <br>первым владельцем и при соблюдении условий<br> программы.</p>
+        </div>
+
+        <div>
+            <img style="width: 470px;" src="images/Снимок экрана 2026-10-06 в 19.01.11.png" alt="">
+        </div>
+    </div>
+</div>
+
+
+<h2 style="text-align: center; margin-top: 70px;">Преимущества сервисного плана 5ТО</h2>
+
+<div class="ttt">
+    <div style="display: flex; justify-content: center; gap: 30px; text-align: center;">
+        <div>
+            <img src="images/Снимок экрана 2026-10-06 в 19.21.50.png" alt="">
+            <p><b>Комфорт</b></p>
+            <ul>
+                <li>Вы избавляетесь от необходимости оплачивать ТО, вне <br>зависимости от роста цен на запчасти и услуги в течение 5 лет.</li> <br>
+                <li>Регулярное обслуживание поддерживает надёжность, <br>безопасность и работоспособность вашего автомобиля.</li>
+            </ul>
+        </div>
+
+        <div>
+            <img src="images/Снимок экрана 2026-10-06 в 19.26.50.png" alt="">
+            <p><b>Высокий уровень сервиса</b></p>
+            <ul>
+                <li>Обслуживание проводится квалифицированными <br>специалистами Toyota на специализированном оборудовании.</li> <br>
+                <li>Используются только оригинальные запасные части, <br>соответствующие строгим стандартам качества.</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div style="display: flex; justify-content: center; gap: 30px; text-align: center; margin-top: 50px;">
+        <div>
+            <img src="images/Снимок экрана 2026-10-06 в 19.33.02.png" alt="">
+            <p><b>Высокая остаточная стоимость</b></p>
+            <ul>
+                <li>Регулярное ТО у официальных дилеров повышает рыночную <br>стоимость автомобиля при продаже.</li> <br>
+                <li>План привязан к автомобилю и может быть использован новым <br>владельцем.</li>
+            </ul>
+        </div>
+
+        <div>
+            <img src="images/Снимок экрана 2026-10-06 в 19.35.32.png" alt="">
+            <p><b>Удобство</b></p>
+            <ul>
+                <li>Проходить ТО можно в любом официальном дилерском центре <br>Toyota в Казахстане и Кыргызстане.</li> <br>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="yyy">
+    <div>
+        <h2>Что входит в сервисный план 5ТО?</h2>
+        <p>Сервисный план предусматривает выполнение регламентных работ в <br>рамках программы 5 ТО, включая замену предусмотренных <br>регламентом технических жидкостей, фильтров, запасных частей и <br>расходных материалов, а также проверку основных систем <br>автомобиля. <br>
+<br>
+Состав и объём работ определяются исключительно регламентом <br>завода-изготовителя для соответствующего технического <br>обслуживания и могут различаться в зависимости от модели <br>автомобиля. <br>
+<br>
+С подробным перечнем работ, условиями и ограничениями можно <br>ознакомиться в документе <b>«Условия программы “5 ТО”»</b>.
+</p>
+    </div>
+
+    <div>
+        <img src="images/Снимок экрана 2026-10-06 в 19.43.13.png" alt="">
+    </div>
+</div>
+
+
+<div class="cont30">
+    <div class="cont31">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo8">
+    </div>
+
+    <div class="cont32">
+        <div class="cont33">
+            <h2 class="text17">
+                Каталог и цены
+            </h2>
+            <a href="#" class="text18">
+                Модели
+                <span class="text22">⌄</span>
+            </a>
+            <a href="#" class="text18">
+                Брошюры и прайс-листы
+            </a>
+            <a href="#" class="text18">
+                Автомобили с пробегом
+            </a>
+            <img style="width: 100px; margin-top: 200px;" src="images/Group 12.svg" alt="">
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Купить Toyota
+            </h2>
+            <a href="#" class="text18">
+                Кредитование
+            </a>
+            <a href="#" class="text18">
+                Страхование
+            </a>
+            <a href="#" class="text18">
+                Корпоративные продажи
+            </a>
+            <a href="#" class="text18">
+                Специальные предложения
+            </a>
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Владельцам
+            </h2>
+            <a href="#" class="text18">
+                Гарантия
+            </a>
+            <a href="#" class="text19">
+                Запчасти и аксессуары
+            </a>
+            <a href="#" class="text18">
+                Сервис
+            </a>
+            <a href="#" class="text18">
+                Ремонт
+            </a>
+            <a href="#" class="text18">
+                Техническое обслуживание
+            </a>
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Мир Toyota
+            </h2>
+            <a href="#" class="text18">
+                Новости и события
+            </a>
+            <a href="#" class="text18">
+                О компании
+            </a>
+            <a href="#" class="text18">
+                Руководящие принципы Toyota
+            </a>
+            <a href="#" class="text18">
+                Экология
+            </a>
+            <a href="#" class="text18">
+                Карьера в Toyota
+            </a>
+            <a href="#" class="text18">
+                Узнать о бренде Lexus
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div style="display: flex; justify-content: center; font-size: 17px; font-style: italic; color: gray;" >
+    <p>
+        Технические характеристики и комплектация автомобилей Toyota, указанные на Сайте, могут отличаться от технических характеристик и <br>комплектации автомобилей Toyota, поставляемых в Республику Казахстан и Кыргызскую Республику. <br> <br>
+Любая информация о Продукции Toyota, услугах и/или работах, в том числе, о рекламных акциях и кампаниях, размещенных на настоящем <br>Cайте, носят исключительно информационный характер и не является публичной офертой. За окончательными коммерческими, <br>финансовыми и прочими условиями приобретения товаров, оказания услуг, выполнения работ необходимо обращаться к официальным <br>уполномоченным дилерам Toyota в Республике Казахстан и Кыргызской Республике. <br> <br>
+Сведения о ценах на Продукцию Toyota, содержащиеся на Сайте, носят исключительно информационный характер. Указанные цены <br>являются максимальными ценами перепродажи и могут отличаться от действительных цен Уполномоченных дилеров Toyota. Приобретение любой <br>Продукции Toyota осуществляется в соответствии с условиями индивидуального договора купли-продажи.
+    </p>
+</div>
+<p style="margin-left: 120px; margin-top: 100px;">Все права защищены. © Toyota</p>
+</body>
+</html>

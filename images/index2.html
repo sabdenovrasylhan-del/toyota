@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автомобили с пробегом</title>
+    <style>
+  * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #20212a;
+    background: white;
+}
+
+.cont40 {
+    width: 100%;
+    height: 255px;
+    overflow: hidden;
+}
+
+.photo40 {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.cont41 {
+    width: 100%;
+    text-align: center;
+    padding: 48px 100px 35px;
+}
+
+.line41 {
+    width: 200px;
+    height: 2px;
+    background: #e50000;
+    margin: 0 auto 45px;
+}
+
+.text41 {
+    max-width: 1600px;
+    margin: auto;
+    font-size: 32px;
+    line-height: 1.25;
+    font-weight: 500;
+}
+
+.cont42 {
+    width: 100%;
+    display: flex;
+    background: #f5f5f5;
+}
+
+.cont43 {
+    width: 355px;
+    background: white;
+    flex-shrink: 0;
+    border-right: 1px solid #ddd;
+}
+
+.filter43 {
+    height: 72px;
+    padding: 0 24px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.filter43 span:last-child {
+    color: #a8acb8;
+    font-size: 25px;
+}
+
+.filterText43 {
+    text-align: center;
+    color: #777;
+    font-size: 18px;
+    line-height: 1.4;
+    padding: 25px 25px 15px;
+}
+
+.clear43 {
+    display: block;
+    width: 280px;
+    height: 60px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid #222;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cont44 {
+    flex: 1;
+    padding: 35px 75px 60px;
+    min-width: 0;
+}
+
+.top44 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.top44 h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.icons44 {
+    color: #adb1bd;
+    font-size: 28px;
+}
+
+.cert44 {
+    margin-top: 35px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert44 input {
+    width: 22px;
+    height: 22px;
+}
+
+.question44 {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #b8bbc6;
+    color: white;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+
+.buttons44 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+.trade44 {
+    height: 45px;
+    padding: 0 20px;
+    background: #555667;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.trade44 span {
+    font-size: 27px;
+    margin-left: 15px;
+}
+
+.reset44 {
+    height: 45px;
+    padding: 0 25px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.sort44 {
+    margin-left: auto;
+    width: 220px;
+    height: 47px;
+    padding: 0 20px;
+    background: white;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.cars44 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.car45 {
+    background: white;
+    min-width: 0;
+    transition: 0.4s ease;
+}
+
+.car45:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+.imageBox45 {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carImg45 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.car45:hover .carImg45 {
+    transform: scale(1.04);
+}
+
+.tested45 {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 9px 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.heart45 {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb1bd;
+    font-size: 30px;
+}
+
+.compare45 {
+    position: absolute;
+    top: 65px;
+    right: 15px;
+    width: 43px;
+    height: 43px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #adb1bd;
+    font-size: 25px;
+}
+
+.carInfo45 {
+    padding: 18px;
+}
+
+.carInfo45 h3 {
+    margin: 0 0 15px;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.year45 {
+    margin: 0 0 15px;
+    color: #747781;
+    font-size: 15px;
+}
+
+.spec45 {
+    margin: 0;
+    color: #747781;
+    font-size: 15px;
+    line-height: 1.5;
+    min-height: 65px;
+}
+
+.price45 {
+    margin-top: 15px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.monthly45 {
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292b32;
+}
+
+.cont1 {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.cont2 {
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    width: 40px;
+}
+
+.cont3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    transition: transform 0.8s ease;
+}
+
+.cont3 :hover{
+    cursor: pointer;
+   
+    border-radius: 10px;
+    height: 50px;
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.text1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #303039;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.text1 span {
+    margin-left: 8px;
+}
+
+
+.cont4 {
+    margin-left: auto;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text3 {
+    font-size: 25px;
+}
+
+.text4 {
+    font-size: 17px;
+}
+
+.text5 {
+    margin-left: 22px;
+    font-size: 29px;
+}
+
+    </style>
+</head>
+<body>
+    <header class="cont1">
+    <div class="cont2">
+      <a href="index.html"> <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo1"> </a> 
+    </div>
+    <div class="cont3">
+        <a href="#modeli" class="text1">Модели</a>
+        <a href="images/index2.html" class="text1">
+            Авто с пробегом
+        </a>
+        <a href="index3.html" class="text1">Trade-in</a>
+        <a href="index4.html" class="text1 text2">
+            Финансы и страхование
+        </a>
+        <a href="index5.html" class="text1">Сервис</a>
+        <a href="index6.html" class="text1">Бизнес</a>
+        <a href="index7.html" class="text1">Мир Toyota</a>
+    </div>
+    <div class="cont4">
+        <span class="text3">◎</span>
+        <span class="text4">
+            <select style="border: none;">
+                <option value="">RU</option>
+                <option value="">KAZ</option>
+            </select>
+        </span>
+        <span class="text5">⌕</span>
+    </div>
+</header>
+    <div class="cont40">
+        <img style="margin-top: 30px;" src="images2/Снимок экрана 2026-10-05 в 14.44.45.png" class="photo40">
+    </div>
+
+    <div class="cont41">
+        <div class="line41"></div>
+        <h1 class="text41">
+            КАТАЛОГ АВТОМОБИЛЕЙ В НАЛИЧИИ У ОФИЦИАЛЬНЫХ ДИЛЕРОВ
+            TOYOTA В КАЗАХСТАНЕ С ГИБКИМИ УСЛОВИЯМИ ПОКУПКИ,
+            ВКЛЮЧАЯ TRADE-IN И ОЦЕНКУ ОНЛАЙН
+        </h1>
+    </div>
+
+    <div class="cont42">
+        <div class="cont43">
+            <div class="filter43">
+                <span>Тип двигателя</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Привод</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Объём двигателя</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Мощность, л.с.</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Коробка</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Кузов</span>
+                <span>⌄</span>
+            </div>
+
+            <div class="filter43">
+                <span>Возраст</span>
+                <span>⌄</span>
+            </div>
+
+            <p class="filterText43">
+                Подходит 226 автомобилей с пробегом
+            </p>
+            <button class="clear43">
+                Очистить фильтры
+            </button>
+        </div>
+
+        <div class="cont44">
+            <div class="top44">
+                <h2>
+                    226 АВТОМОБИЛЕЙ С ПРОБЕГОМ
+                </h2>
+                <div class="icons44">
+                    ♡ ◉ ☷
+                </div>
+            </div>
+
+            <div class="cert44">
+                <label>
+                    <input type="checkbox">
+                    Сертифицированные
+                </label>
+                <span class="question44">?</span>
+            </div>
+            <div class="buttons44">
+                <button class="trade44">
+                    Сдать свой авто в Trade-in
+                    <span>×</span>
+                </button>
+                <button class="reset44">
+                    Сбросить
+                </button>
+                <select class="sort44">
+                    <option>Сортировка</option>
+                    <option>По цене</option>
+                    <option>По году</option>
+                    <option>По пробегу</option>
+                </select>
+            </div>
+
+            <div class="cars44">
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScoOIfi17DESCUw7h6MHD8HSZgBQhQB_an4Teeuo2XQA&s=10" class="carImg45">
+                        <div class="tested45">
+                            <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA LAND CRUISER</h3>
+                        <p class="year45">
+                            2023 · 112 459 км
+                        </p>
+                        <p class="spec45">
+                            3.5 л (415 л.с.), бензин, полный,
+                            02.10.2026
+                        </p>
+                        <div class="price45">
+                            45 290 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 642 361 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="data:image/jpeg;base64,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" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA CAMRY</h3>
+                        <p class="year45">
+                            2021 · 103 042 км
+                        </p>
+                        <p class="spec45">
+                            2.5 л (181 л.с.), бензин,
+                            передний, 30.09.2026
+                        </p>
+                        <div class="price45">
+                            14 310 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 202 963 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLwMO4OJJJkEFUxyf0r2gaeDWwR_FKvJEL37TTBc6FKQ&s=10" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+
+                    <div class="carInfo45">
+                        <h3>TOYOTA COROLLA</h3>
+                        <p class="year45">
+                            2022 · 25 011 км
+                        </p>
+                        <p class="spec45">
+                            1.6 л (122 л.с.), бензин,
+                            передний, 30.09.2026
+                        </p>
+                        <div class="price45">
+                            9 500 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 134 741 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-s85pYXJHAcgVSYdH7AO4tsXzrlgp3FFfOD-3I7q9dw&s=10" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA CAMRY</h3>
+                        <p class="year45">
+                            2024 · 19 333 км
+                        </p>
+                        <p class="spec45">
+                            2.5 л (200 л.с.), бензин,
+                            передний, 28.09.2026
+                        </p>
+                        <div class="price45">
+                            18 000 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 255 299 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <div class="cars44">
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ4YTA9Zs7r5d7ABw20i3dAPPrSl34qVhvgeF-Jm5_hw&s=10" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA LAND CRUISER</h3>
+                        <p class="year45">
+                            2023 · 63 338 км
+                        </p>
+                        <p class="spec45">
+                            3.5 л (415 л.с.), бензин, полный,
+                            28.09.2026
+                        </p>
+                        <div class="price45">
+                            55 000 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 780 080 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRy9jJv-r1DLwR8EDJySLnu6QG6WaVPw39C1BRyImeO7w&s=10" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA LAND CRUISER</h3>
+                        <p class="year45">
+                            2023 · 21 374 км
+                        </p>
+                        <p class="spec45">
+                            3.5 л (415 л.с.), бензин, полный,
+                            22.09.2026
+                        </p>
+                        <div class="price45">
+                            51 000 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 723 963 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSszJfRi2536nLdJej2M2glhVH87VpKrRfD2HMVYJ3Yyg&s" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+
+                    <div class="carInfo45">
+                        <h3>TOYOTA CAMRY</h3>
+                        <p class="year45">
+                            2021 · 107 011 км
+                        </p>
+                        <p class="spec45">
+                            2 л (150 л.с.), бензин,
+                            передний, 21.09.2026
+                        </p>
+                        <div class="price45">
+                            11 800 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 167 951 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car45">
+                    <div class="imageBox45">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1MU78wYZb71XT7LQu6LyDSGG49TaGj-z3tNvOjArEig&s" class="carImg45">
+                        <div class="tested45">
+                             <img style="width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUEDODeKz9eYMQsI__wjkqSs5EqQVMlGlnaEYx9tofXg&s=10" alt=""> | СЕРТИФИЦИРОВАН
+                        </div>
+                        <div class="heart45">♡</div>
+                        <div class="compare45">☷</div>
+                    </div>
+                    <div class="carInfo45">
+                        <h3>TOYOTA LAND CRUISER PRADO</h3>
+                        <p class="year45">
+                            2024 · 19 333 км
+                        </p>
+                        <p class="spec45">
+                            2.7 л (163 л.с.), бензин,
+                            полный, ".".09.2026
+                        </p>
+                        <div class="price45">
+                            26 690 000 ₸
+                        </div>
+                        <div class="monthly45">
+                            от 378 531 ₸ /мес
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+           * {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292b32;
+}
+
+.cont1 {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.cont2 {
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    width: 40px;
+}
+
+.cont3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    transition: transform 0.8s ease;
+}
+
+.cont3 :hover{
+    cursor: pointer;
+   
+    border-radius: 10px;
+    height: 50px;
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.text1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #303039;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.text1 span {
+    margin-left: 8px;
+}
+
+
+.cont4 {
+    margin-left: auto;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text3 {
+    font-size: 25px;
+}
+
+.text4 {
+    font-size: 17px;
+}
+
+.text5 {
+    margin-left: 22px;
+    font-size: 29px;
+}
+        .contain1 img{
+        width: 100%;
+        }
+
+    .cont100 {
+    display: flex;
+    width: 100%;
+    background: white;
+    font-family: Arial, sans-serif;
+    margin-top: 140px;
+}
+
+.cont101,
+.cont107,
+.cont113 {
+    width: 33.33%;
+    min-height: 950px;
+    box-sizing: border-box;
+    border-right: 1px solid #ddd;
+    padding: 0 21px;
+    color: #292930;
+}
+
+.text100,
+.text106,
+.text112 {
+    color: #1478f2;
+    font-size: 19px;
+    padding-top: 5px;
+}
+
+.text101,
+.text107,
+.text113 {
+    font-size: 27px;
+    line-height: 1.25;
+    margin-top: 28px;
+    min-height: 70px;
+}
+
+.photo100,
+.photo101,
+.photo102 {
+    width: 90%;
+    height: 230px;
+    object-fit: contain;
+    display: block;
+    margin: 10px auto 5px;
+}
+
+.cont102,
+.cont108,
+.cont114 {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    margin: 12px 20px 30px;
+}
+
+.cont102 span,
+.cont108 span,
+.cont114 span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.color100,
+.color111,
+.color118 {
+    background: #eee;
+    outline: 2px solid red;
+    outline-offset: 3px;
+}
+
+.color101,
+.color109 {
+    background: #8c1824;
+}
+
+.color102,
+.color110 {
+    background: #11151a;
+}
+
+.color103,
+.color112 {
+    background: #aaa59e;
+}
+
+.color104,
+.color113,
+.color120 {
+    background: #202632;
+}
+
+.color105,
+.color114,
+.color121 {
+    background: #55534f;
+}
+
+.color106,
+.color115,
+.color122 {
+    background: #354542;
+}
+
+.color107,
+.color116,
+.color123 {
+    background: #3e4347;
+}
+
+.color117 {
+    background: #11151a;
+    outline: 2px solid red;
+    outline-offset: 3px;
+}
+
+.color118 {
+    background: #eeeeee;
+}
+
+.color119 {
+    background: #aaa59e;
+}
+
+.text102,
+.text108,
+.text114 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.text103,
+.text109,
+.text115 {
+    font-size: 21px;
+    margin-bottom: 34px;
+}
+
+.button100,
+.button102,
+.button104 {
+    width: 100%;
+    height: 85px;
+    background: #292930;
+    color: white;
+    border: none;
+    font-size: 20px;
+    line-height: 1.1;
+    cursor: pointer;
+}
+
+.button101,
+.button103,
+.button105 {
+    width: 100%;
+    height: 65px;
+    margin-top: 11px;
+    background: white;
+    border: 1px solid #292930;
+    color: #292930;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.cont103,
+.cont109,
+.cont115 {
+    border-top: 1px solid #ddd;
+    margin: 21px -21px 0;
+    padding: 27px 21px;
+    font-size: 20px;
+}
+
+.cont104,
+.cont110,
+.cont116 {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.text104,
+.text110,
+.text116 {
+    color: #1478f2;
+    font-size: 18px;
+    margin-bottom: 14px;
+}
+
+.text105,
+.text111,
+.text117 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.arrow100,
+.arrow101 {
+    position: absolute;
+    right: 18px;
+    top: 25px;
+    font-size: 25px;
+}
+
+.cont105,
+.cont106,
+.cont111,
+.cont112,
+.cont117,
+.cont118 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.cont105 span,
+.cont106 span,
+.cont111 span,
+.cont112 span,
+.cont117 span,
+.cont118 span {
+    color: #888;
+}
+
+.cont105 b,
+.cont106 b,
+.cont111 b,
+.cont112 b,
+.cont117 b,
+.cont118 b {
+    color: #292930;
+}
+    </style>
+</head>
+<body>
+    
+    <div class="contain1">
+        <img src="images/Снимок экрана 2026-10-07 в 12.58.45.png" alt="">
+        <img style="margin-top: 30px;" src="images/Снимок экрана 2026-10-07 в 13.02.51.png" alt="">
+    </div>
+
+
+
+    <div class="cont100">
+    <div class="cont101">
+
+        <div class="text100">
+             Бензин
+        </div>
+
+        <h2 class="text101">Абсолютно новый RAV4 Комфорт</h2>
+
+        <img id="car100" class="photo100" src="images/Снимок экрана 2026-10-07 в 13.13.12.png">
+
+        <div class="cont102">
+            <span class="color100" onclick="changeCar('images/Снимок экрана 2026-10-07 в 13.13.12.png')"></span>
+            <span class="color101" onclick="changeCar('images/Снимок экрана 2026-10-07 в 15.09.24.png')"></span>
+            <span class="color102" onclick="changeCar('images/Снимок экрана 2026-10-07 в 15.09.34.png')"></span>
+            <span class="color103" onclick="changeCar('images/Снимок экрана 2026-10-07 в 15.09.42.png')"></span>
+            <span class="color104" onclick="changeCar('images/Снимок экрана 2026-10-07 в 15.09.51.png')"></span>
+            <span class="color105"></span>
+            <span class="color106"></span>
+            <span class="color107"></span>
+        </div>
+
+        <div class="text102">19 990 000 ₸ ⓘ</div>
+        <div class="text103">от 232 320 ₸ в месяц ⓘ</div>
+
+        <button class="button100">
+            Ознакомиться и создать<br>
+            конфигурацию
+        </button>
+
+        <button class="button101">
+            Сравнить  ⇄
+        </button>
+
+        <div class="cont103">
+            ⚙ Информация о двигателе
+        </div>
+
+        <div class="cont104">
+            <div class="text104"> Бензин</div>
+            <div class="text105">
+                2.0л Бензин<br>
+                4X4, Вариатор Multidrive S
+            </div>
+        </div>
+
+        <div class="cont105">
+            <span>Привод</span>
+            <b>4X4</b>
+        </div>
+
+        <div class="cont106">
+            <span>Коробка передач</span>
+            <b>Вариатор Multidrive S</b>
+        </div> 
+    </div>
+
+
+    <div class="cont107">
+
+        <div class="text106">
+             Бензин  Гибрид
+        </div>
+
+        <h2 class="text107">Абсолютно новый RAV4 Престиж</h2>
+
+        <img class="photo101" src="images/Снимок экрана 2026-10-07 в 13.13.12.png">
+
+        <div class="cont108">
+            <span class="color108"></span>
+            <span class="color109"></span>
+            <span class="color110"></span>
+            <span class="color111"></span>
+            <span class="color112"></span>
+            <span class="color113"></span>
+            <span class="color114"></span>
+            <span class="color115"></span>
+            <span class="color116"></span>
+        </div>
+
+        <div class="text108">20 990 000 ₸ ⓘ</div>
+        <div class="text109">от 243 942 ₸ в месяц ⓘ</div>
+
+        <button class="button102">
+            Ознакомиться и создать<br>
+            конфигурацию
+        </button>
+
+        <button class="button103">
+            Сравнить  ⇄
+        </button>
+
+        <div class="cont109">
+            ⚙ Варианты двигателей
+        </div>
+
+        <div class="cont110">
+            <div class="text110"> Бензин</div>
+            <div class="text111">
+                2.0л Бензин<br>
+                4X4, Вариатор Multidrive S
+            </div>
+            <span class="arrow100">⌄</span>
+        </div>
+
+        <div class="cont111">
+            <span>Привод</span>
+            <b>4X4</b>
+        </div>
+
+        <div class="cont112">
+            <span>Коробка передач</span>
+            <b>Вариатор Multidrive S</b>
+        </div>
+    </div>
+
+
+    <div class="cont113">
+
+        <div class="text112">
+             Бензин  Гибрид
+        </div>
+
+        <h2 class="text113">Абсолютно новый RAV4 Люкс</h2>
+
+        <img class="photo102" src="images/Снимок экрана 2026-10-07 в 13.13.24.png">
+
+        <div class="cont114">
+            <span class="color117"></span>
+            <span class="color118"></span>
+            <span class="color119"></span>
+            <span class="color120"></span>
+            <span class="color121"></span>
+            <span class="color122"></span>
+            <span class="color123"></span>
+        </div>
+
+        <div class="text114">25 990 000 ₸ ⓘ</div>
+        <div class="text115">от 302 051 ₸ в месяц ⓘ</div>
+
+        <button class="button104">
+            Ознакомиться и создать<br>
+            конфигурацию
+        </button>
+
+        <button class="button105">
+            Сравнить  ⇄
+        </button>
+
+        <div class="cont115">
+            ⚙ Варианты двигателей
+        </div>
+
+        <div class="cont116">
+            <div class="text116"> Бензин</div>
+            <div class="text117">
+                2.0л Бензин<br>
+                4X4, Вариатор Multidrive S
+            </div>
+            <span class="arrow101">⌄</span>
+        </div>
+
+        <div class="cont117">
+            <span>Привод</span>
+            <b>4X4</b>
+        </div>
+
+        <div class="cont118">
+            <span>Коробка передач</span>
+            <b>Вариатор Multidrive S</b>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+function changeCar(image) {
+    document.getElementById("car100").src = image;
+}
+</script>
+</html>

@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #292b32;
+}
+
+.cont1 {
+    width: 100%;
+    height: 78px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    position: relative;
+    z-index: 10;
+}
+
+.cont2 {
+    width: 105px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo1 {
+    width: 40px;
+}
+
+.cont3 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+    transition: transform 0.8s ease;
+}
+
+.cont3 :hover{
+    cursor: pointer;
+   
+    border-radius: 10px;
+    height: 50px;
+    transform: scale(1.07);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.text1 {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #303039;
+    font-size: 18px;
+    white-space: nowrap;
+}
+
+.text1 span {
+    margin-left: 8px;
+}
+
+
+.cont4 {
+    margin-left: auto;
+    padding-right: 28px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.text3 {
+    font-size: 25px;
+}
+
+.text4 {
+    font-size: 17px;
+}
+
+.text5 {
+    margin-left: 22px;
+    font-size: 29px;
+}
+
+.cont5 {
+    width: 100%;
+    display: flex;
+    min-height: 830px;
+}
+
+.cont6 {
+    width: 33.5%;
+    min-width: 430px;
+    padding: 72px 55px 30px 170px;
+    background: white;
+}
+
+.text6 {
+    margin: 0;
+    font-size: 36px;
+    line-height: 1.1;
+    font-weight: 700;
+}
+
+.cont7 {
+    width: 78px;
+    height: 4px;
+    background: #e60012;
+    margin-top: 28px;
+    margin-bottom: 42px;
+}
+
+.text7 {
+    display: block;
+    text-decoration: none;
+    color: #393a40;
+    font-size: 19px;
+    margin-bottom: 37px;
+}
+
+.cont8 {
+    display: block;
+    width: 272px;
+    padding: 18px 20px;
+    background: #050505;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+.cont9 {
+    margin-top: 10px;
+    position: relative;
+}
+
+.photo2 {
+    position: absolute;
+    left: -150px;
+    top: 20px;
+    width: 92px;
+}
+
+.photo3 {
+    width: 270px;
+    height: auto;
+    display: block;
+}
+
+.text8 {
+    font-size: 18px;
+    margin: 4px 0 0 30px;
+}
+
+.cont10 {
+    width: 66.5%;
+    overflow: hidden;
+}
+
+.cont11 {
+    width: 100%;
+    height: 435px;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo4 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text9 {
+    position: absolute;
+    left: 45px;
+    bottom: 33px;
+    color: white;
+    font-size: 22px;
+    line-height: 1.25;
+    text-shadow: 0 1px 4px #333;
+}
+
+.text9 b {
+    text-decoration: underline;
+    font-size: 21px;
+}
+
+.cont12 {
+    width: 100%;
+    height: 395px;
+    display: flex;
+}
+
+.cont13 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont14 {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.photo5,
+.photo6 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.text10 {
+    position: absolute;
+    left: 45px;
+    bottom: 20px;
+    color: white;
+    font-size: 21px;
+    line-height: 1.25;
+    text-shadow: 0 1px 5px #222;
+}
+
+.text10 b {
+    text-decoration: underline;
+}
+
+.cont15 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 55px;
+    height: 65px;
+    border: none;
+    border-radius: 35px 0 0 35px;
+    background: rgba(80,80,80,0.65);
+    color: white;
+    font-size: 38px;
+}
+
+.cont16 {
+    position: fixed;
+    right: 0;
+    top: 95px;
+    width: 54px;
+    z-index: 20;
+}
+
+.cont17 {
+    width: 54px;
+    height: 65px;
+    background: white;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+}
+
+.cont18 {
+    width: 54px;
+    height: 65px;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 27px;
+    border-radius: 5px 0 0 5px;
+}
+
+.cont19 {
+    position: fixed;
+    right: 25px;
+    bottom: 70px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: #ff1d2d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 27px;
+    box-shadow: 0 3px 12px #aaa;
+    z-index: 50;
+}
+
+.cont20 {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border: 2px solid white;
+    border-radius: 50%;
+    left: 0;
+    bottom: 3px;
+}
+
+.cont21 {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 55px;
+    height: 55px;
+    background: #444;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+.cont22 {
+    width: 100%;
+    min-height: 650px;
+    background: white;
+    position: relative;
+    padding-top: 45px;
+    overflow: hidden;
+}
+
+.text11 {
+    margin: 0 0 55px 140px;
+    font-size: 34px;
+    color: #292a31;
+    font-weight: 700;
+}
+
+.cont23 {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+
+    margin-left: 115px;
+    margin-bottom: 65px;
+}
+
+.text12,
+.text13 {
+    text-decoration: none;
+    color: #292a31;
+    font-size: 20px;
+
+    padding-bottom: 9px;
+}
+
+.text12 {
+    border-bottom: 2px solid #292a31;
+}
+
+.cont24 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 85px;
+    gap: 25px;
+}
+
+.cont25 {
+    width: 23%;
+    text-align: center;
+    position: relative;
+}
+
+.photo7 {
+    width: 100%;
+    height: 125px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.text14 {
+    font-size: 21px;
+    margin: 0 0 32px;
+    color: #292a31;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.text15 {
+    font-size: 22px;
+    margin: 0 0 7px;
+    color: #303139;
+}
+
+.text16 {
+    font-size: 18px;
+    margin: 0 0 30px;
+    color: #3b3c43;
+}
+
+.cont29 {
+    width: 205px;
+    height: 62px;
+    border: none;
+    background: #292a30;
+    color: white;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.cont27,
+.cont28 {
+    position: absolute;
+    top: 395px;
+    border: none;
+    background: transparent;
+    color: #292a31;
+    font-size: 34px;
+    cursor: pointer;
+}
+
+.cont27 {
+    left: 45px;
+}
+
+.cont28 {
+    right: 45px;
+}
+
+
+
+
+
+
+
+.cont30 {
+    width: 100%;
+    min-height: 650px;
+    background: white;
+    padding-top: 20px;
+}
+
+.cont31 {
+    width: 100%;
+    padding-left: 110px;
+    margin-bottom: 65px;
+}
+
+.photo8 {
+    width: 45px;
+    height: auto;
+}
+
+.cont32 {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 110px;
+    gap: 65px;
+}
+
+.cont33 {
+    display: flex;
+    flex-direction: column;
+}
+
+.text17 {
+    margin: 0 0 28px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #292a31;
+}
+
+.text18,
+.text19 {
+    text-decoration: none;
+    color: #303139;
+    font-size: 17px;
+    margin-bottom: 42px;
+    line-height: 1;
+}
+
+.text21 {
+    color: #777;
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+.text22 {
+    float: right;
+    color: #777;
+    font-size: 25px;
+    margin-right: 25px;
+}
+
+.info22 {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.info22.show {
+    display: block;
+}
+
+.info23 {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.info23.show {
+    display: block;
+}
+
+.info24 {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.info24.show {
+    display: block;
+}
+
+.info25 {
+    display: none;
+    margin-top: 20px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+}
+
+.info25.show {
+    display: block;
+}
+
+    </style>
+</head>
+<body>
+<header class="cont1">
+    <div class="cont2">
+      <a href="index.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo1"> </a> 
+    </div>
+    <div class="cont3">
+        <a href="#modeli" class="text1">Модели</a>
+        <a href="images/index2.html" class="text1">
+            Авто с пробегом
+        </a>
+        <a href="index3.html" class="text1">Trade-in</a>
+        <a href="index4.html" class="text1 text2">
+            Финансы и страхование
+        </a>
+        <a href="index5.html" class="text1">Сервис</a>
+        <a href="index6.html" class="text1">Бизнес</a>
+        <a href="index7.html" class="text1">Мир Toyota</a>
+    </div>
+    <div class="cont4">
+        <span class="text3">◎</span>
+        <span class="text4">
+            <select style="border: none;">
+                <option value="">RU</option>
+                <option value="">KAZ</option>
+            </select>
+        </span>
+        <span class="text5">⌕</span>
+    </div>
+</header>
+
+<div class="cont5">
+    <div class="cont6">
+        <h1 class="text6">
+            Добро<br>
+            пожаловать!<br>
+            Что Вас<br>
+            интересует?
+        </h1>
+        <div class="cont7"></div>
+
+        <a href="#" class="text7">
+            Модельный ряд
+        </a>
+
+        <a href="index8.html" class="cont8">
+            Бесплатный тест-драйв
+        </a>
+
+        <a href="index9.html" class="text7">
+            Брошюры и прайс-листы
+        </a>
+
+        <a href="index10.html" class="text7">
+            Сервисный план «5 ТО»
+        </a>
+
+
+        <div class="cont9">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ8AAAC6CAMAAACHgTh+AAAA81BMVEX///86OEb+/v7sHjI+PEo3NUQvLTxOTFmVk5pZV2LqACH4qqvuS1bqGC2Rj5Y4NkRDQU4rKDqlpKmxsbOGhYsxLkCdnKDCwcQoJTrrABYiHzJgX2c6N0gmIzXtKz0zMUDwaXIeGy/d3N764ODJyczxhorsDCf08/TqAAD1r6/5zMz39/h2dX1/foXr6+zzkZXweX/wQ07k4+YYFSq6ub1paHEoJjNubXbrAA71xsZUU1sdGDAQCicgHDQYFCdpZ3QAACXv2NX0u7r45+jumpv+6ODjJTT68+3vX2TsgYz3tbPuPkjygILvcnXtkpbzoaDrU16E2u8SAAAR10lEQVR4nO2d/UOiyhrHB3Iw2RRR8QUhgggtzHbVtk5uu7fsnjptZ3f//7/mzoDgGy8zI5Xp/f5QCgjMh5lnnpl5ZgDl3BaqnC9c1epVu88DWuW4bRTUDEWRmyoslBp9Wh5QEbZOBoQa5gIV2czvWzQ8YHt/21QqnbfLQlOVBYigSIqqlUiR5DhlnypDfRz1rVGpraoKYiIJZr7qkvwoxwml176xd5VVL6hNhATK8j6BKdl6Hkj9anuoSBynqLVO2rG7wAOpX+eaiIig7qeUmh3hgTTKq6jYyHCUeNTu8ADAvkFEJLWdZEZ2iQcADU7mOKNZjT9it3gAUFcNjlMvY63IrvEA/baOahopzj/bOR4AVE3IQTPGrO4gDzAoC6jMRCd7F3kAvofKTLMXtWsneSCzamqafBmxY0d5gMZ3jVN+rG7fVR7AQr6ZsppDdpYHsL5CTl6xIbvLA+UQTdOXE7/DPIBlapy65LvvMg/QGGvccNFT3WkeoKJy0FjoI9ptHuBc1pT2/IYd5wHykNMrc993nUdfRU2Zwez7rvMAVWRCCrOvO88DXBqcPqt0/8+jr3NQCfvLWHhUtPLaykU1Lt9HFZlTasEXFh41RVpbRjv9Om+lMnJTgz53Fh5XRgYRCRvEw1Y543z6mYVHAW4XD5yg22kGYeGhrI9js3jYJqdMMwgDD364bTxwBtH9ZgwDj4G5dTyQBRF8r52Bh61vHQ9QhlLO+8DAoyFvHw/kg6g2/sDAoyJsH4/OcFrlMvAobSEP1IqBCo5WZeDRy8Ady44H37Hsxmg0athWajBUgkZNrokLDAOPmwzcsSkPu06sqAH5TqNUgKaqN2Wkpmnm2nWbPiTZP5XuN2IYeHBSZjwqJmmA7dBevo1+5WboB5iGkqCgD69GTEjaUOKYeLhZmI+AB3FVpS/xsK5UOTKfaoYulOhitMH0VnA/GT0P3MP23jys9jjJiAnD9MDKZVkmJ49YeFjvzsM9Nw0t+XBhoZOYSH4vCD2PTNyxdXg0BJISqxcoCw2qcfMsPKrvzKNkktVvUG1QpasucILLwGM/ormvCAqdBNnr066M5UWFVsFY2vEt4NFebD1BQ9bV4bdvw6HaVJZsypCqzIw8g0rPo7fKw+jVqOXNqrBGjUXVpklSzpd2jPzc794slBXhlutV7EHHc8sa9UtZX0ByS5M0ZBeRR0bPo73KQx+k/4xMQWEUYh7tzdzFoawuT2tx7avh/O3d1skvjTwyucrAg1s17cN1POUFBTzkaB7tWe7QFKMa5Xj1a+pcHhlTFBlBU/YZeHyP4EF3hgQl8yjNbIdkluJijPvzJmZMPlcsD5Vzeh6d4QoPWKY6Q5ISedhmeEkjNsDYO8s4rIIkgzjvogr3Bz0PS1/hYWQ3tpTEwxXCKwuF5GksODYsOPSK9NrnBizQ87BXXYZw8GJ9JfE4Dy2lktpZMJg19MyVlmCMUN1WpucR4Y4JFFac8OwRPKywtBg36ScafKUuzSWBy9HzqK86y3LylCMaJfC4DLIHJDIJ9ji4PZ3w9th4nK82LJukOTJd8TysMH0mWZWxHzw4r1+DQLgflJ5He7X1YGbmjiXwCK3HbCw+RbngTlWy58XGo7zKQ83MHYvn4Yb2QCft/rKDjgnC+o+JBx/RD2MQzXwmUiyPUeBjxXnyEQrH3YdEN8jEo7PaG5ShOxbPI4ixkGRy+I2AIZnBZ+IRMXib5VBKLI/bIC+SWg8sYdrzbURO/VkWEw+7uVpcsnPHYnmEnZTL/cqJqk1tsARJjmbiMVp1x5Ts3LFYHuEYqUlztvDhqSR9h0w86qu9H3LC9F5axfEI+okM4tYIlhsYEKJcxcSjtlq/UGXhFMXxCKoKitoFKy9RPDImHhGxdDrFcjRpiuNRDhJG10ccDDUrJGlk4hHhjmXXOxbLIxwTVOnYB6WbqIJh4mG+Zu9YLI9OYAhMOvbBeAaR2WHh4X5bwUHaXCJSDI9wjJSyaRCcDpJ47Cw8BhHuaZaRLWk8dDoegXdAdI8sPF7ZHXut/EHUomPhEeGOCVmu15VqP+gGZV/dflRe1x2LrV+CWp6yfgnGVhWSPMzCIyKWTp+6BB1rVOoVyrI5HJpyrtCrVRoD6kidVP+Drmsy8JaImhQsPCLcsVv0yHi7lMfL4xlQwsN3Ggehoci6aRQoA7rieAS9cpSFM/CWiDCy8IiIpbvtWOdfdSE6qAwKTfNqRG4E43iUphl/fqpbujomTTFj4ZFbSbbGFVQhMVrHkPUeabGP41EN6rVvNNkttP5E1TQDj05U/ApBuKFh5skaHnE8wm4oqgZM0HyR8iRHM/DomxGJJRLU8yTN4Nj+sbCri2Js1A3uliyJDDzsNWLpoHmZ7jzE8giHG4i6dhZPRjjgwMBjvVg6w0x1VWJ5hE9CIO9ADUoyNIgOZ+BBHv8WLfUqxRzGj0cZQc02Js0g4c0SppCBR2ndqXNCLnksL55HOG5MOlM19PFJxw8ZeETE0lEKJvemxfPohz0vy0u6xCgc/yY1wQw8MpjaoCUat4Tx/VrYVCAa0K4H2UMjDZli4JFBKL+WeH8JPGYjg5KQbkJGYXZSSLvkGXhkMdOUg1/jk5MUH1QJ+14gTAPSMMPLEXcR0PPIZmoDB7nYWiYxni4fllYoJ5eByqyblzywn56HlcVMUy4pxi2RxyAMieEkNSGZfG/23NJDzULR88hmagOXUEUkx5+OzNkpmjdxWaQhKGHugAJ5OAA9j2ymNnhAYhqcKfHJ+3MZFJqRrWb7Rp9VghrNWBk9j4jBW0bFdWim8ADn8yXWGOeri8bSqkvqnEugfacZSqXncXUb539AQdZVWRYEQZZVfWmaX5RifIg0HqC2EA4MZTV3Xm/YlmXZo/qloS50S0HCwDFmHp1qfryaRaDSHBdqVXvQx2XV7Qzsai0/lJNn6cLoGNJUHmB/vHgiyUCPAksWlq5ofKXrfGYar7RKwuIcE6gbNXvVaHVGP/Qk7027jXx26TxAQyUrtXKBclyZLb4Q8I3LoRKUB2PYbsQ5E/2SmZBHolsVBDxAf95ixgkOqYeFGHngO6qXvUkm0LxKzJKdXoIDN4xqdZLwQEelzSiU1AJ9TCw7DyS7N5T1fGoBbahaXF+zHDUmQsYDuPtjOb7b1tDLdGEivtbige6pQuIJ93NxZQbmIg4n5IGvnjMjxzigbF6yBSytyYNQHakZo/9E5K7qN3/fmGBAzapB/IaomS2R8FzLQoVhsrqnt+EB+o04RRTxQbCPrKocjErtnDk0VdU0v8v5q3pETUesN+Lx6uI7A+SPDVzGlS5CbQuPrPT6PNZ9Ym+rV+fBbwgPwvt4fR73nzZEm8EDPLXEjVBxQ3gcFfc2QocbyMNpYYUbiuipob+tlv8F7RL9HeL0w3XLCX813VlshecQw0/eGYrXrWAbPrQ4+82m8ih+mRwfH98fOMH34zNnz/lzfIc2iAf3k8nk0x7eJ95N7j1Gk+MHdMDDsa97L3Hex8m/zp54is82eXH2Wsf/RdQOJ5O/W/f+oZ8c5zPee3zqbDKPA8D/95EHX6abinxH3HMe+SeUuH94VAUg/UEJaLmAfyrute55/lTcE5/9PfxZCyMF/COqK04QhTNv+4Wz1+V5p9iagBdnug3ci87F9MNG8+DPut1T8MsJeDyK3TP+ooX38A9i9+978LiHQKCEHF8Xn9A/zOOUP+pedw+Bx+MJPHe7D7zP40vXK1FdFzjdZ/70GqHsdvlO9xphvuAvutfXYnGjeYCz7vUJfrgBj+4v/i+UDPEv/lMXbeje4efd4ifP4KQ74X/5PMBnx2OJeDifwW9R/DTNHwctEdsPxKP7mT/u+raHd3FZcy7Ar64ohsVlQ3lMLn67d0EeRuXlAhzjR3g9AT/xcc4LTnWLf3TA4wX//HmOxxcvfzgP4MIJedyfPj+jwod4XPA4Y/k8Hn0e/N3p6em/G54/UBHgj2f2A329u8YVCQ+8Lc4RuPN4dH+jA8WTFR7oy1Ex5IGEDU3XRSeaBHVTwMNrKZxutv0AZ+LeET9pheXl+gx4xX6CjSr6/ws8i5iHKLr8r+tVHq178KfoBDyOfv78uYfLC4+2n3WXePw+/PnzcMPzx9m1033kZ/ajJT7yn1Gaf/PHLdERD12AKxZU7xS/HDnOKo/rY1SwZvYD/cS3H0VU4h5aizweWptvP45/HvzmO7P8IeKaBZWf4iMyLZ8fXPAXzgRo+14ReR4LPLBlOfzjIphh/vj1+eXkj1denOKh62exKQ/xAtyjvRttP5w/eAPv3/fe1P9ARsI9LBYP73Bx5z0/rMW7XrF3Tvhnr77188ddS3zgeeRRiJ/4fwL7AT6JyP8AxT0RVc/YJos8L3o8vBbt8fXr8+hQdU7O54/Df16QiqF/ij6j1P978gd72wcXDyeHXs5xvO04P52g0rP39PIFp+fkqFh8enjBrvjTywHKUkcnLy8nOH84LyeYwNEJvlZx+uMDtPdt8kepTNOnsdCec7Dmv/p//dQ7olOc3443FcO/e/hv0d8TbMcqhscHxznT3wZ7X5mHZSp5ih7brW/fFiBnUAA5coqbIOfvV+LhLUpiSMQ25OVgM/SHnEeZgofrx0ynBbN9VHk88hL5CiPBchoazSqJH0cejwIkWzwFzC+Ixqm97JYMohCfpLXP7vHoGcTzq+dfCyQYmS1yMU1NeooSaWSAxuNRM6SocfYIVRdiOaDaIwm/GSWskGuvpjLhTOQ0WJF4POoCJxMd7S7HWgp6Pe2qbk814iR868clM+pUlDhYkHg8RjKnE9Wf5xHrFjbrSXmEr+hJ8VK9hHQGDNagQY/G42HrZDGrc8Z0IY/04uxIpy4lRu/6AZfrJjRLJB6Pvko2AT8fHcKmKbp+PlrOYPyg0p7F3EX/zg+nezse6UA8HrwESWboVVfXuZjlfFnN/div2jgq1rIblVJbinnXxJymr2l+Qx6pQDweoA0J5oBHrNK3IAkqcrOp3t6qzaacmDGmChapfEseaUB8HvsCZ6Y6VxHGdC1pX9134JECxOdh6+kLiGXzSo85jcN4yI3j0TE5JS2UN2KRrbU0tzzJm/JIBuLzADdQSlmw0/pPyttWKLWwQOjG8UAeqpoS3GyrWWYQbXF65KbxsG7TVwW0mhkCGS75fxvGA1kHmLo+Rr+cVQ0jrazVsiE4Qh77CsGMZ/4qwSMjl6ZFLF2zYTwGJtEa3hXC9xQlSpGiTBVb4pITzc4DL95EskqzVV57eqXejr5OBk+X4KQpx4c8Rnr6/ApP9eFar67UxgmOTtY0Vs6ZenTIA3CQbMVl0L+MWO+TVHI53UpliiM4I2Hc+IxHReB0wlX37LzKRERTyN72lS0NKs14uALFKqaNm6RpgjFSbknfoPheNOZ5gLqskVkQT/bVOLV/Y15QNqnesPkeMMACD97QCFr9M/Ur+ejZaxEwhHG++i6jNbSa4wGqOifQretq1fPq17R56Yas5yLf5LuJmueB+0eJX7QUqD+q5Ye6IMCInIKnkX83etXsXg3z6lrgYZkaZFkY2rWqpXZZ0YO3NiPpqirDfK/eYJ3o+E5a4AHOZZql35bk9gf4pd5VpNHItvoZrsj+dlrk4XKoxLBMa94aLfIA9pDjElZ+2n4t8QD7smYQLRS6pVrmAQoG+eJlW6gVHh0Fcvruzk5e4QEsVeLUDN/287G0ygM0kE01tzI4jEARPEAVteZ3FUgUD1A3UQ7ZzSITyQPUUQ5RmR3Vj6xoHqCCcojc3pClCN5SMTxA1dQ4g/sorfTsFMcD2E3IQcJVirdIsTzAICdw2u3Vh2ylsiueB3CvblGZyfA90B9BCTymo5Nq+wN1b62tRB5gcCPjNwyc704PQDIPnEUMmoGTD680HqB/hQuNMDzfjbo3lQdejBiPThpqYfQhRlDWEwEPj4iBR9iGvca2lxsiHohIW8XDTobcbK+1PODGi5AHqmpKijdzA8r693yv0rD6W4lln5QHwMu/Gv4r1aAh4AW0Da6c3zaVOXIe/iv3TF0IXtMjQQlumTgqHlgdu35VltWmrCiKATXtvVOQrSSUIjoePpSBParU93s/Cluo/wHzUiPK1PbRagAAAABJRU5ErkJggg==" class="photo2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSme4HAee0G54Dr4drKr4f20Tqfbi-JRPQGy2_QH1rSqg&s=10" class="photo3">
+            <p class="text8">
+                Узнать о Land Cruiser 250
+            </p>
+        </div>
+    </div>
+    <div class="cont10">
+
+        <div class="cont11">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiUe6RnseFzsICIcTizcTuSPQZWDNYW9-ZYnNYslm-iw&s=10" class="photo4">
+            <div class="text9">
+                НОВЫЙ RAV4 Абсолютная уверенность с настоящим гибридом
+                <br>
+                <a style="color: white;" href="rav4.html">Узнать больше >></a>
+            </div>
+        </div>
+
+        <div class="cont12">
+            <div class="cont13">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWPXT8C18q-0sjVXomPzGmGx6pCT4oLXERD3WggSMQ1g&s=10" class="photo5">
+                <div class="text10">
+                    Land Cruiser Prado
+                    <br>
+                    <a style="color: white;" href="prado.html">Узнать больше >></a>
+                </div>
+            </div>
+
+
+            <div class="cont14">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6C1eoMFSWRIGVSIfbWhQe2mPWNEY6oLVhQ4lRJqpuAw&s=10" class="photo6">
+                <div class="text10">
+                    Camry. Специальное предложение
+                    <br>
+                    <a style="color: white;" href="camry.html">Узнать больше >></a>
+                </div>
+
+                <button class="cont15">›</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="cont16">
+    <div class="cont17"></div>
+    <div class="cont17"></div>
+    <div class="cont17"></div>
+    <div class="cont18"></div>
+</div>
+
+<div class="cont19">
+    <span class="cont20"></span>
+    💬
+</div>
+
+<div class="cont21">
+    ↑
+</div>
+
+
+
+
+
+<div class="cont22" id="modeli">
+    <h1 class="text11">Модельный ряд</h1>
+    <div class="cont23">
+        <a href="#" class="text12">Все модели</a>
+        <a href="#" class="text13">Бензин</a>
+        <a href="#" class="text13">Дизель</a>
+        <a href="#" class="text13">Гибрид</a>
+    </div>
+
+    <div class="cont24">
+        <div class="cont25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHkOSF1Hfdr9u1eLDrocW4xHO8BehYV9u7_nagHSQUmulwVkZRFP1phgs&s=10" class="photo7">
+            <h2 class="text14">Camry</h2>
+            <p class="text15">18 690 000 ₸ </p>
+            <p class="text16">от 217 212 ₸ в месяц </p>
+            <button class="cont29" onclick="showCar()">
+                Узнать больше
+            </button>
+            <div class="info22" id="camryInfo">
+           <h2>Toyota Camry</h2>
+           <p>Современный и комфортный седан для города и дальних поездок.</p>
+           <p><b>Двигатель:</b> 2.5 л</p>
+           <p><b>Коробка передач:</b> автоматическая</p>
+           <p><b>Привод:</b> передний</p>
+           <p><b>Мощность:</b> 203 л.с.</p>
+            </div>
+        </div>
+
+
+
+        <div class="cont25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqbpbVVZzsSPx2-V5MPNJdG7MQtkgJWnLY3_-UK2L2SQ&s=10" class="photo7">
+            <h2 class="text14">RAV4</h2>
+            <p class="text15">21 990 000 ₸ </p>
+            <p class="text16">от 255 564 ₸ в месяц </p>
+            <button class="cont29" onclick="showRav4()">
+                Узнать больше
+            </button>
+            <div class="info23" id="rav4Info">
+            <h2>Toyota RAV4</h2>
+            <p>Стильный и практичный кроссовер для города и путешествий.</p>
+            <p><b>Двигатель:</b> 2.0 л</p>
+            <p><b>Коробка передач:</b> автоматическая</p>
+            <p><b>Привод:</b> полный</p>
+            <p><b>Мощность:</b> 173 л.с.</p>
+            </div>
+        </div>
+
+        <div class="cont25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS93CWWyuDC7WoKqKPdF0xeHz2iupzciupvR4MAFlRguA&s=10" class="photo7">
+            <h2 class="text14">Land Cruiser 250</h2>
+            <p class="text15">33 990 000 ₸ </p>
+            <p class="text16">от 396 804 ₸ в месяц </p>
+            <button class="cont29" onclick="showLC250()">
+                Узнать больше
+            </button>
+            <div class="info24" id="lc250Info">
+            <h2>Toyota Land Cruiser 250</h2>
+            <p>Надёжный внедорожник, созданный для города и самых сложных дорог.</p>
+            <p><b>Двигатель:</b> 2.8 л</p>
+            <p><b>Коробка передач:</b> автоматическая</p>
+            <p><b>Привод:</b> полный</p>
+            <p><b>Мощность:</b> 204 л.с.</p>
+         </div>
+        </div>
+
+        <div class="cont25">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGnWH1UDuoC3Am0EnZM0g0ANt9lrXK8dPZFeDmPUyQuw&s=10" class="photo7">
+            <h2 class="text14">Land Cruiser 300</h2>
+            <p class="text15">55 480 000 ₸ </p>
+            <p class="text16">от 644 778 ₸ в месяц </p>
+            <button class="cont29" onclick="showLC300()">
+                Узнать больше
+            </button>
+            <div class="info25" id="lc300Info">
+            <h2>Toyota Land Cruiser 300</h2>
+            <p>Премиальный внедорожник с мощным двигателем, высоким уровнем комфорта и отличной проходимостью.</p>
+            <p><b>Двигатель:</b> 3.5 л</p>
+            <p><b>Коробка передач:</b> автоматическая</p>
+            <p><b>Привод:</b> полный</p>
+            <p><b>Мощность:</b> 415 л.с.</p>
+          </div>
+        </div>
+    </div>
+
+
+    <button class="cont27"><</button>
+    <button class="cont28">></button>
+
+</div>
+
+
+
+
+
+
+<div class="cont30">
+    <div class="cont31">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHugkOEDGlLx-1yEb-uw-UmYcuyOI5p6AoqsKBSwrIuQ&s=10" class="photo8">
+    </div>
+
+    <div class="cont32">
+        <div class="cont33">
+            <h2 class="text17">
+                Каталог и цены
+            </h2>
+            <a href="#" class="text18">
+                Модели
+                <span class="text22">⌄</span>
+            </a>
+            <a href="#" class="text18">
+                Брошюры и прайс-листы
+            </a>
+            <a href="#" class="text18">
+                Автомобили с пробегом
+            </a>
+            <img style="width: 100px; margin-top: 200px;" src="images/Group 12.svg" alt="">
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Купить Toyota
+            </h2>
+            <a href="#" class="text18">
+                Кредитование
+            </a>
+            <a href="#" class="text18">
+                Страхование
+            </a>
+            <a href="#" class="text18">
+                Корпоративные продажи
+            </a>
+            <a href="#" class="text18">
+                Специальные предложения
+            </a>
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Владельцам
+            </h2>
+            <a href="#" class="text18">
+                Гарантия
+            </a>
+            <a href="#" class="text19">
+                Запчасти и аксессуары
+            </a>
+            <a href="#" class="text18">
+                Сервис
+            </a>
+            <a href="#" class="text18">
+                Ремонт
+            </a>
+            <a href="#" class="text18">
+                Техническое обслуживание
+            </a>
+        </div>
+
+
+        <div class="cont33">
+            <h2 class="text17">
+                Мир Toyota
+            </h2>
+            <a href="#" class="text18">
+                Новости и события
+            </a>
+            <a href="#" class="text18">
+                О компании
+            </a>
+            <a href="#" class="text18">
+                Руководящие принципы Toyota
+            </a>
+            <a href="#" class="text18">
+                Экология
+            </a>
+            <a href="#" class="text18">
+                Карьера в Toyota
+            </a>
+            <a href="#" class="text18">
+                Узнать о бренде Lexus
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div style="display: flex; justify-content: center; font-size: 17px; font-style: italic; color: gray;" >
+    <p>
+        Технические характеристики и комплектация автомобилей Toyota, указанные на Сайте, могут отличаться от технических характеристик и <br>комплектации автомобилей Toyota, поставляемых в Республику Казахстан и Кыргызскую Республику. <br> <br>
+Любая информация о Продукции Toyota, услугах и/или работах, в том числе, о рекламных акциях и кампаниях, размещенных на настоящем <br>Cайте, носят исключительно информационный характер и не является публичной офертой. За окончательными коммерческими, <br>финансовыми и прочими условиями приобретения товаров, оказания услуг, выполнения работ необходимо обращаться к официальным <br>уполномоченным дилерам Toyota в Республике Казахстан и Кыргызской Республике. <br> <br>
+Сведения о ценах на Продукцию Toyota, содержащиеся на Сайте, носят исключительно информационный характер. Указанные цены <br>являются максимальными ценами перепродажи и могут отличаться от действительных цен Уполномоченных дилеров Toyota. Приобретение любой <br>Продукции Toyota осуществляется в соответствии с условиями индивидуального договора купли-продажи.
+    </p>
+</div>
+<p style="margin-left: 120px; margin-top: 100px;">Все права защищены. © Toyota</p>
+
+
+
+
+
+
+</body>
+<script>
+function showCar() {
+    document.getElementById("camryInfo").classList.toggle("show");
+}
+
+function showRav4() {
+    document.getElementById("rav4Info").classList.toggle("show");
+}
+
+function showLC250() {
+    document.getElementById("lc250Info").classList.toggle("show");
+}
+
+function showLC300() {
+    document.getElementById("lc300Info").classList.toggle("show")
+}
+</script>
+</html>
